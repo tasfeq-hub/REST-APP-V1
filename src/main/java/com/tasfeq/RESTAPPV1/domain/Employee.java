@@ -26,12 +26,15 @@ public class Employee {
 	public Employee() {}
 
 	public Employee(Long id, @NotNull String name, @NotNull String phone, @NotNull Date createdAt) {
-		super();
+		this(name,phone,createdAt);
 		this.id = id;
+	}
+	
+	public Employee(@NotNull String name, @NotNull String phone, @NotNull Date createdAt) {
 		this.name = name;
 		this.phone = phone;
 		this.createdAt = createdAt;
-	}
+	} 
 
 	public Long getId() {
 		return id;
